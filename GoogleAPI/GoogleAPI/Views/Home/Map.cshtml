@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHyZCZxnzHb3t5L0e_JItjQlZPgExgDK4"></script>
+
+<script type="text/javascript">
+    var resizeWindow = function () {
+        var fixedHeight = window.outerHeight - $(".navbar").outerHeight() - 200;
+        $("#map").height(fixedHeight);
+        $("#panel").height(fixedHeight);
+    };
+
+    $(document).ready(function () {
+        resizeWindow();
+        var directionsService = new google.maps.DirectionsService();
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 7,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('panel'));
+
+        var request = {
+            origin: 'Chung cu Him Lam, Trung Son, Khu dân cư Him Lam, Bình Hưng, Ho Chi Minh City, Ho Chi Minh, Vietnam',
+            destination: '21A Gò Dầu, Tân Sơn Nhì, Ho Chi Minh City, Ho Chi Minh, Vietnam',
+            travelMode: google.maps.DirectionsTravelMode.DRIVING,
+            provideRouteAlternatives: true
+        };
+
+        directionsService.route(request, function (response, status) {
+            console.log(response);
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+            }
+        });
+    });
+
+</script> 
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-8 pull-left" id="map"></div>
+        <div class="col-md-4 pull-right" id="panel" style="overflow-y:auto;"></div>
+    </div>
+</div>
+

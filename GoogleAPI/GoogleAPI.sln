@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAPI", "GoogleAPI\GoogleAPI.csproj", "{FE9A4724-FCB6-45EB-9717-7EFAA8B31EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAPI.Tests", "GoogleAPI.Tests\GoogleAPI.Tests.csproj", "{86274471-BC74-460A-B406-3CC8D448AC74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE9A4724-FCB6-45EB-9717-7EFAA8B31EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9A4724-FCB6-45EB-9717-7EFAA8B31EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9A4724-FCB6-45EB-9717-7EFAA8B31EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9A4724-FCB6-45EB-9717-7EFAA8B31EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86274471-BC74-460A-B406-3CC8D448AC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86274471-BC74-460A-B406-3CC8D448AC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86274471-BC74-460A-B406-3CC8D448AC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86274471-BC74-460A-B406-3CC8D448AC74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
